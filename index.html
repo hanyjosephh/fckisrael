@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('group.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+#topText {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+#playBtn {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: none;
+    background: radial-gradient(circle at top, #ff5252, #b30000);
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+#creator {
+    margin-top: 30px;
+    font-size: 18px;
+}
+</style>
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<div class="content">
+    <div id="topText">What Orange did to us?</div>
+    <button id="playBtn">PRESS</button>
+    <audio id="audio" src="./faaa.mp3"></audio>
+    <div id="creator">Created by: Hany Josephh</div>
+</div>
+
+<script>
+document.getElementById("playBtn").addEventListener("click", function() {
+    document.getElementById("audio").play();
+});
+</script>
+
+</body>
+</html>
